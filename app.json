@@ -5,6 +5,7 @@
       "expo-router"
     ],
     "name": "jobs_com_project",
-    "slug": "jobs_com_project"
+    "slug": "jobs_com_project",
+    "newArchEnabled": true
   }
 }
