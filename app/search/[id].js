@@ -3,9 +3,9 @@ import { View, Text, TouchableOpacity, SafeAreaView, FlatList, Image, ActivityIn
 import { useRouter, Stack, useGlobalSearchParams } from 'expo-router'
 import axios from 'axios'
 import { COLORS, icons, SIZES } from '../../constants'
-import { ScreenHeaderBtn, NearbyJobCard } from '../../components'
+import { NearbyJobCard } from '../../components'
 import styles from '../../styles/search'
-import { Feather } from 'expo-vector-icons'
+
 
 
 const JobSearch = () => {
@@ -27,7 +27,7 @@ const JobSearch = () => {
         url: `https://jsearch.p.rapidapi.com/search`,
       
         headers: {
-          'x-rapidapi-key': 'eca71db683mshf7047881875edafp1e76f9jsnc17d79a71176',
+          'x-rapidapi-key': '32c20277dcmshd8c16b8a36a964ap1e48cajsnc1ba1daf33d4',
     'x-rapidapi-host': 'jsearch.p.rapidapi.com'
         },
         params: {

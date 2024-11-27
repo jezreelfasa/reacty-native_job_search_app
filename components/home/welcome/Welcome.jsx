@@ -39,7 +39,7 @@ const Welcome = ({ searchTerm, setSearchTerm, handleClick }) => {
         </TouchableOpacity>
         
       </View> 
-      <View style={styles.tabContainer}>
+      <View style={styles.tabsContainer}>
           <FlatList
             data={jobTypes}
             renderItem={({ item }) => (

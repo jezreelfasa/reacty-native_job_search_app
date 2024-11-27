@@ -6,6 +6,22 @@
     ],
     "name": "jobs_com_project",
     "slug": "jobs_com_project",
-    "newArchEnabled": true
+    "newArchEnabled": true,
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "2bb2ab32-d60c-403f-9d3f-0ec55642884a"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/2bb2ab32-d60c-403f-9d3f-0ec55642884a"
+    },
+    "android": {},
+    "ios": {}
   }
 }

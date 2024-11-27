@@ -15,7 +15,10 @@ const Login = () => {
          Alert.alert("Successful!", "Logged in successfully");
          router.push('/home');
       } catch (error) {
-         Alert.alert("Login failed!", error?.message || 'An unknown error occurred.');
+         Alert.alert("Login failed!", error?.message || errorMessage);
+         const errorMessage = error.message.includes('auth/')
+                ? error.message.split('auth/')[1].replace(/-/g, ' ').toUpperCase()
+                :""
       }
    };
       
