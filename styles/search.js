@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 
 import { COLORS, FONT, SIZES,SHADOWS } from "../constants";
-import { logOut } from "../services/authService";
 
 const styles = StyleSheet.create({
     container: {
@@ -54,17 +53,21 @@ const styles = StyleSheet.create({
         fontSize: SIZES.medium,
         color: COLORS.primary
     },
-    upload: {
+    /*upload: {
        textAlign: "right", // Aligns the text content to the right
         alignSelf: "flex-end",
         marginRight: 10,
-       
+        flexDirection:"row",
+    
     
     },
+    */
     centImage: {
         justifyContent: 'center',
         alignItems: 'center',
         zIndex: 1,
+        flexDirection:'row'
+         
     },
     noo: {
         backgroundColor: COLORS.lightWhite,
@@ -73,15 +76,21 @@ const styles = StyleSheet.create({
         ...SHADOWS.medium,
         padding: 3,
         borderRadius: SIZES.small / 1.25,
-        marginTop:1.5
+        justifyContent: "center",
+        alignItems: "center",
+
+        //marginTop: -60,
+        marginLeft:10
     },
     up: {
         fontFamily: "DMBold",
         color: COLORS.gray,
         padding: 1,
+        fontSize: 10,
+        
         
     },
-    containerSign: {
+    /*containerSign: {
         marginTop:10,
         position: "absolute",
     bottom: 0,
@@ -91,18 +100,23 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     flexDirection: "row",
-    },
+    },*/
 
     logOut: {
-        flex: 1,
+        //flex: 1,
         padding:15,
     backgroundColor: "#FE7654",
-        height: "100%",
+        //height: "100%",
     
-    justifyContent: "center",
-    alignItems: "center",
-    borderRadius: SIZES.medium,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: SIZES.medium,
+        marginBottom: 5,
+        borderRadius: 15,
+    
+    
     },
+
     logOutText: {
         fontSize: SIZES.medium,
     color: COLORS.white,

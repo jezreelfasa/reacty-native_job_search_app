@@ -43,9 +43,9 @@ const ProfileScreen = () => {
     
     <View style={styles.centImage}>
      
-      {image && <Image source={{ uri: image }} style={{ width: 70, height: 70, borderRadius:5,}} />}
+      {image && <Image source={{ uri: image }} style={{ width: 30, height: 30, borderRadius: 15,  }} />}
       <TouchableOpacity style={styles.noo}onPress={pickImage}>
-        <Text style={styles.up}>Upload image</Text>
+        <Text style={styles.up}>Image</Text>
       </TouchableOpacity>
       </View>
     

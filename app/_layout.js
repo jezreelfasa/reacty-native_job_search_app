@@ -2,7 +2,7 @@ import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
 
 export const unstable_settings = {
-   initialRouteName: 'login'
+   initialRouteName: 'home'
    
 }
 
@@ -17,7 +17,7 @@ const Layout = () => {
 }
   return (
      <Stack>
-        <Stack.Screen name='home' />
+     
         <Stack.Screen name='login' />
         <Stack.Screen name='signup' />
         

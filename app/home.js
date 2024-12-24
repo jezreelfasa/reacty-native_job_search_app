@@ -1,9 +1,9 @@
 //This page works with the search/[id].js folder;
 
-import { View, Text, Alert, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { View, Text, Alert, TouchableOpacity, ScrollView, SafeAreaView, StatusBar } from 'react-native'
 import { logOut } from '../services/authService'
 import { useRouter,Stack} from 'expo-router'
-import { COLORS,icons, SIZES } from '../constants'
+import { COLORS,icons, SIZES, SHADOWS} from '../constants'
 import { ScreenHeaderBtn, Welcome, Nearbyjobs, Popularjobs } from '../components'
 import { useState } from 'react'
 import ProfileScreen from './profilescreen'
@@ -25,25 +25,26 @@ const Home = () => {
 
   }
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite}}>
+      <StatusBar backgroundColor={COLORS.lightWhite}/>
       <Stack.Screen 
         options={{
-          headerStyle: { backgroundColor: COLORS.lightWhite },
-          headerShadowVisible: false,
-          headerLeft: () => (
-            <ScreenHeaderBtn
-              iconUrl={icons.menu}
-            dimension='60%'/>
-          ),
-       
-          headerTitle:""
           
+          headerShown: false,
         }}
-      
       />
-        <View style={styles.upload}>
-        <Text style={styles.centImage}><ProfileScreen /></Text>
+      <View style={{backgroundColor:COLORS.lightWhite, ...SHADOWS.medium, padding:10, height:'8%', flexDirection:"row", justifyContent:"space-between"}}>
+        <TouchableOpacity>
+          <ScreenHeaderBtn iconUrl={icons.menu} dimension='60%'/>
+        </TouchableOpacity>
+         <View style={{marginTop:10}}>
+        <Text ><ProfileScreen /></Text>
       </View>
+       
+      </View>
+    
+
+        
       <ScrollView showsVerticalScrollIndicator={false}>
         <View 
           style={{
@@ -65,7 +66,7 @@ const Home = () => {
       
           </View>
       </ScrollView>
-       <View style={styles.containerSign}>
+       <View>
       <TouchableOpacity style={styles.logOut} 
         onPress={handleLogOut}>
         <Text style={styles.logOutText}>Log out</Text>

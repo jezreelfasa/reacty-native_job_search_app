@@ -3,8 +3,9 @@ import { SIZES, COLORS } from '../../../constants'
 
 const styles = StyleSheet.create({
    btnContainer: {
-      width: 40,
-      height: 40,
+      marginTop:5,
+      width: 30,
+      height: 30,
       borderRadius: SIZES.small / 1.25,
       backgroundColor: COLORS.white,
       justifyContent: "center",
@@ -14,7 +15,8 @@ const styles = StyleSheet.create({
    btnImg: (dimension) => ({
       width: dimension,
       height: dimension,
-      borderRadius:SIZES.small/1.25
+      borderRadius: SIZES.small / 1.25,
+      top:0
    })
 })
 
